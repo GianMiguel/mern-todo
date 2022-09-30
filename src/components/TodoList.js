@@ -7,7 +7,7 @@ function TodoList() {
     const [todoList, setTodoList] = useState([]);
 
     const getTodoList = () => {
-        Axios.get('https://mern-todoexam.herokuapp.com/')
+        Axios.get('https://mern-todoexam.herokuapp.com/todo')
         .then(res => {
             setTodoList(res.data);
         })
