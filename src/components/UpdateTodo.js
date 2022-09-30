@@ -32,7 +32,7 @@ function UpdateTodo() {
             description: todoInput.description,
         };
 
-        Axios.post(`http://localhost:8001/todo/update/${id}`, data)
+        Axios.post(`https://mern-todoexam.herokuapp.com/todo/update/${id}`, data)
             .then(res => {
                 // if(res.status === 200){
                     swal('To-Do Updated Successfully', res.data.title , 'success');
