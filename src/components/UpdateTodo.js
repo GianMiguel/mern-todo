@@ -31,7 +31,7 @@ function UpdateTodo() {
             title: todoInput.title,
             description: todoInput.description,
         };
-
+        console.log(data);
         Axios.post(`https://mern-todoexam.herokuapp.com/todo/update/${id}`, data)
             .then(res => {
                 // if(res.status === 200){
@@ -40,6 +40,7 @@ function UpdateTodo() {
                     title: '',
                     description: '',
                 });
+                navigate('/');
                 // }
             })
             .catch(err => {

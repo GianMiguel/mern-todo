@@ -37,6 +37,7 @@ function NewTodo() {
                     description: '',
                     date: ''
                 });
+                navigate('/');
                 // }
             })
             .catch(err => {
