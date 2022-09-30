@@ -37,7 +37,7 @@ function NewTodo() {
                     description: '',
                     date: ''
                 });
-                navigate('https://gianmiguel-todolist.netlify.app/');
+                navigate('/');
                 // }
             })
             .catch(err => {
