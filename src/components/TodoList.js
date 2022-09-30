@@ -7,7 +7,7 @@ function TodoList() {
     const [todoList, setTodoList] = useState([]);
 
     const getTodoList = () => {
-        Axios.get('http://localhost:8001/todo/')
+        Axios.get('https://mern-todoexam.herokuapp.com/')
         .then(res => {
             setTodoList(res.data);
         })
@@ -19,7 +19,7 @@ function TodoList() {
     // Deleting Todo Item
     const deleteTodo = (id, title) =>{
         if(window.confirm('Are you sure that you want to delete this To-Do item?')) {
-            Axios.delete(`http://localhost:8001/todo/${id}`);
+            Axios.delete(`https://mern-todoexam.herokuapp.com/todo/${id}`);
             swal('To-Do Deleted Successfully', title , 'success');
             setTimeout(() => getTodoList(), 500);
         }
