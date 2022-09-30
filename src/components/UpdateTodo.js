@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams , Link} from 'react-router-dom';
 import Axios from 'axios';
 import swal from 'sweetalert';
 
@@ -79,8 +79,14 @@ function UpdateTodo() {
                         <label htmlFor="date" className="form-label">Date Added: </label>
                         <input type="text" name="date" id="date" className="form-control" value={dateFormatter(todoInput.date)} readOnly/> 
                     </div>
-  
-                        <button type="submit" className="btn btn-primary">Submit</button>
+
+                    <div className='row ms-3'>
+                        <Link to='/' className="btn btn-outline-secondary col-2 ">Go Back</Link>
+                        <div className='col-6 offset-1'>
+                            <button type="submit" className="btn btn-primary col-12">Submit</button>
+                        </div>
+                    </div>
+                        
                 </form>
             </div>
         </div>
