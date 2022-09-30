@@ -40,7 +40,6 @@ function UpdateTodo() {
                     title: '',
                     description: '',
                 });
-                navigate('/');
                 // }
             })
             .catch(err => {
